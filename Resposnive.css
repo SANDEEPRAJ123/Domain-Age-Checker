@@ -1,0 +1,280 @@
+/* Base style for the footer */
+.footer {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Fixed footer for screens up to 1350px */
+@media screen and (max-width: 1350px) {
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    /* Ensure main content is not hidden behind the fixed footer */
+    .main-content {
+        padding-bottom: 60px; /* Adjust according to footer height */
+    }
+}
+
+
+
+/* Ensure full height and no horizontal scroll on the entire page */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* For devices with width less than or equal to 1116px */
+@media (max-width: 1116px) {
+    .report-container {
+        display: none;  /* Hide the report container by default */
+        padding: 10px;
+    }
+
+    .report-table {
+        width: 100%; /* Table takes the full width of the container */
+        table-layout: auto; /* Automatic column width based on content */
+        border-collapse: collapse;
+    }
+
+    .report-table td, .report-table th {
+        padding: 8px;
+        font-size: 0.9em; /* Smaller font size for smaller screens */
+        text-align: left;
+    }
+
+    /* Optional: Add borders for better separation on smaller screens */
+    .report-table tr {
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Styling for heading */
+    h1 {
+        font-size: 1.5em; /* Reduce font size on smaller screens */
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    /* Search box responsiveness */
+    .search-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Full width for smaller screens */
+        margin: 15px 0;
+    }
+
+    .search-box input[type="url"] {
+        width: 90%; /* Adjust width of input field */
+        max-width: 500px;
+        padding: 10px;
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    .search-box button {
+        padding: 10px 20px;
+        font-size: 1em;
+        width: 90%; /* Button width for smaller screens */
+        max-width: 200px;
+    }
+}
+
+/* For devices with width greater than or equal to 1117px */
+@media (min-width: 1117px) {
+    .report-container {
+        display: none;  /* Hide the report container on larger screens */
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+/* This Css For Contact Form */
+
+@media (max-width: 1390px) {
+    .contact-form {
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: #0becca;
+        padding: 50px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    
+    .form-group {
+        flex: 1;
+        /* Equal width */
+        margin-right: 15px;
+    }
+    
+    .form-group:last-child {
+        margin-right: 0;
+        
+    }
+    
+    .form-label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #000000;
+    
+    }
+    
+    .form-input,
+    .form-select,
+    .form-textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form-select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: #ffffff;
+    }
+    
+    .form-textarea {
+        resize: vertical;
+        height: 150px;
+    }
+    
+    .form-button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    .form-button:hover {
+        background-color: #218838;
+    }
+    
+    .Contact-h1 {
+        color: rgb(4, 92, 23);
+        text-align: center;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+    }
+    
+}
+@media (max-width: 748px) {
+    .contact-form {
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: #0becca;
+        padding: 50px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    
+    .form-group {
+        flex: 1;
+        /* Equal width */
+        margin-right: 15px;
+    }
+    
+    .form-group:last-child {
+        margin-right: 0;
+        
+    }
+    
+    .form-label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #000000;
+    
+    }
+    
+    .form-input,
+    .form-select,
+    .form-textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form-select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: #ffffff;
+    }
+    
+    .form-textarea {
+        resize: vertical;
+        height: 150px;
+    }
+    
+    .form-button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    .form-button:hover {
+        background-color: #218838;
+    }
+    
+    .Contact-h1 {
+        color: rgb(4, 92, 23);
+        text-align: center;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+    }
+    
+}
+
+
+
+
+
+/* Responsive styles for screen sizes below 832px */
+@media screen and (max-width: 832px) {
+    .contact-form {
+        width: 100%; /* Full width on small screens */
+        height: auto; /* Adjust height automatically */
+        padding: 20px; /* Reduce padding */
+        margin-right: 15px;
+    }
+}

@@ -1,0 +1,472 @@
+html,
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    /* Center align with some vertical spacing */
+    padding: 20px;
+    /* background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.container h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0;
+    /* Adjust margin for cleaner alignment */
+    font-size: 1.5rem;
+}
+
+.container .search-box {
+    text-align: center;
+    width: 90%;
+    /* Full width of the container */
+    margin-top: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2.5px solid #080808;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 30px;
+}
+
+.search-box button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #000ba7;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #292082;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Report Container */
+.report-container {
+    width: 80%; /* Increase width to allow more space for the table */
+    max-width: 900px; /* Optional: Set a max-width if needed */
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 25px;
+    margin-left: auto; /* Center the container */
+    margin-right: auto; /* Center the container */
+    display: none;
+    
+}
+
+/* Header Styling */
+.report-header {
+    background-color: #8e999f;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.report-header h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #02fdd7;
+}
+
+/* Table Styling */
+.report-table {
+    width: 100%; /* Ensure the table takes full width */
+    border-collapse: collapse;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.report-table tr:nth-child(odd) td {
+    background-color: #e0f7fa; /* Lighter, valid color */
+}
+
+.report-table tr:nth-child(even) td {
+    background-color: #f7f7f7;
+}
+
+.report-table td {
+    padding: 15px;
+    border-top: 1px solid #f0f0f0;
+    color: #333;
+}
+
+.report-table td:first-child {
+    width: 50%;
+    font-weight: bold;
+}
+
+
+.nav {
+    background-color: rgb(255, 255, 255);
+    padding: 15px 0;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.logo a {
+    color: #79F604;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-right: 200px;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #000ba7;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    color: #000;
+    cursor: pointer;
+}
+
+@media (max-width: 957px) {
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-direction: column;
+        display: none;
+        background-color: rgb(255, 255, 255);
+        padding: 10px 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px 0;
+        text-align: center;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        color: #000;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+.footer {
+    background-color: #141414;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+}
+
+.footer .menu {
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+.footer .menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.0rem;
+}
+
+.footer .Sandeep1 {
+    color: rgb(5, 168, 92);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.heart {
+    width: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    .footer .menu a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 3050px) {
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+    }
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+#progress-bar-container {
+    width: 80%;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+
+#loading-text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.text-container {
+    max-width: 800px;
+    /* Limits the width of the container */
+    margin: 0 auto;
+    /* Centers the container horizontally */
+    text-align: left;
+    /* Aligns text to the left */
+    padding: 20px;
+    /* Adds spacing inside the container */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Matches the font style */
+    font-size: 16px;
+    /* Adjusts the text size */
+    line-height: 1.7;
+    /* Increases text height for readability */
+    color: #000000;
+    /* Sets text color to a dark gray */
+    margin-bottom: 35px;
+}
+
+.text-container h1,
+.text-container h2,
+.text-container h3 {
+    margin-top: 20px;
+    /* Adds space above headings */
+    margin-bottom: 10px;
+    /* Adds space below headings */
+    font-family: 'Segoe UI Semibold', sans-serif;
+    /* Bolder font for headings */
+    line-height: 1.5;
+    /* Line height for headings */
+    color: #000000;
+    /* Slightly darker color for headings */
+}
+
+.text-container p {
+    margin-bottom: 15px;
+    /* Adds space between paragraphs */
+}
+
+
+/* This Css For Contact Form  */
+
+
+
+.contact-form {
+    height: 400px;
+    width: 750px;
+    margin: 0 auto;
+    background-color: #0becca;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font style */
+    font-size: 1em;
+    line-height: 1;
+
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+  
+
+}
+
+.form-group {
+    flex: 1;
+    /* Equal width */
+    margin-right: 15px;
+  
+
+}
+
+.form-group:last-child {
+    margin-right: 0;
+
+}
+/* Adding space between first and last name fields */
+.form-group:first-child {
+    margin-right: 40px; /* Adds extra space between First Name and Last Name */
+    margin-bottom: 20px; /* Additional space below First Name */
+
+}
+#last-name {
+    width: 90%; /* Reduce the width to 80% of the available space */
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
+
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    
+}
+
+.form-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #ffffff;
+}
+
+.form-textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.form-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a22c1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-button:hover {
+    background-color: #1c211d;
+}
+
+.Contact-h1 {
+    color: rgb(4, 92, 23);
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}

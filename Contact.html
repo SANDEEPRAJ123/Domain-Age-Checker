@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Age Checker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Responsive.css">
+</head>
+<link rel="icon" href="favicon.png" type="image/x-icon">
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="Premium.png" alt="Logo">
+            </div>
+            <!-- Hamburger Button -->
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="Contact.html">Contact</a>
+                <a href="About.html">About</a>
+                <a href="#">Services</a>
+                <a href="#">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="Contact-h1">Contact us</h1>
+
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="51001810-c718-4bd1-a909-201991b8ecbe">
+
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="first-name" class="form-label">First Name</label>
+                    <input type="text" id="first-name" name="first-name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name" class="form-label">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" class="form-input" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                <!-- <div class="form-group">
+                    <label for="menu" class="form-label">Today Menu</label>
+                    <select name="menu" id="menu" class="form-select" required>
+                        <option value="" disabled selected>Select Menu</option>
+                        <option value="Normal Burger">Normal Burger</option>
+                        <option value="Latest Burger">Latest Burger</option>
+                        <option value="Trending Burger">Trending Burger</option>
+                        <option value="Indian Burger">Indian Burger</option>
+                    </select>
+                </div> -->
+            </div>
+
+            <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" class="form-textarea" required></textarea>
+            </div>
+
+            <button type="submit" class="form-button">Submit</button>
+        </form>
+
+        <footer class="footer">
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="About.html">About Us</a>
+                <a href="Contact.html">Contact Us</a>
+            </div>
+            <div>
+                <span class="Sandeep1">Made By Sandeep</span>
+                <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-512.png" alt="Heart"
+                    class="heart">
+            </div>
+        </footer>
+        
+</body>
+</html>
