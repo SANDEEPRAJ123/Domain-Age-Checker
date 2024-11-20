@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Age Checker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Resposnive.css">
+</head>
+<link rel="icon" href="favicon.png" type="image/x-icon">
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="Premium.png" alt="Logo">
+            </div>
+            <!-- Hamburger Button -->
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="Contact.html">Contact</a>
+                <a href="About.html">About</a>
+                <a href="#">Services</a>
+                <a href="Blog.html">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Check Your Domain Age</h1>
+        <div class="search-box">
+            <input type="url" id="website" name="website" placeholder="Enter Your Website URL" required>
+            <p id="error-message" class="error-message"></p>
+            <button type="button" onclick="searchWebsite()">Search</button>
+        </div>
+    </div>
+
+    <div class="report-container">
+        <h2>Domain Summary</h2>
+        <table class="report-table">
+            <tr>
+                <td><strong>Domain Name</strong></td>
+                <td id="domain-name">N/A</td>
+            </tr>
+            <tr>
+                <td><strong>Domain Registered</strong></td>
+                <td id="domain-registered">N/A</td>
+            </tr>
+            <tr>
+                <td><strong>Domain Creation Date</strong></td>
+                <td id="creation-date">N/A</td>
+            </tr>
+            <tr>
+                <td><strong>Domain Age in Days</strong></td>
+                <td id="age-days">N/A</td>
+            </tr>
+            <tr>
+                <td><strong>Domain Age in Months</strong></td>
+                <td id="age-months">N/A</td>
+            </tr>
+            <tr>
+                <td><strong>Domain Age in Years</strong></td>
+                <td id="age-years">N/A</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="text-container">
+        <h1>Why Use a Domain Age Checker?</h1>
+        <p>A Domain Age Checker is an essential tool for anyone involved in digital marketing, SEO, or domain purchases.
+            <br>It provides valuable insights into the age of a domain, which can significantly impact its credibility,
+            ranking potential, and trustworthiness.</p>
+        <h2>What Is Domain Age?</h2>
+        <p>Domain age refers to the length of time since a domain was registered. Older domains are often seen as more
+            reliable <br>and authoritative by search engines, making domain age a key factor in search engine
+            optimization (SEO).
+        </p>
+        <h2>Why Domain Age Matters</h2>
+        <h3>1. SEO Ranking:</h3>
+        <p>
+            <li>Older domains often rank higher in search engines due to their perceived stability and history of
+                valuable content.</li>
+        </p>
+        <h3>2. Credibility:</h3>
+        <p>
+            <li>A well-aged domain is more likely to gain the trust of users and potential customers.</li>
+        </p>
+        <h3>3. Investment Value:</h3>
+        <p>
+            <li>Knowing a domain's age helps buyers assess its worth before purchasing.</li>
+        </p>
+        <h1>Benefits of Using a Domain Age Checker</h1>
+        <ul>
+            <li>
+                <strong>Quick Insights:</strong> Easily determine a domain's registration date, age, and expiration
+                date.
+            </li>
+            <li>
+                <strong>Evaluate Domain History:</strong> Check if the domain has a consistent and clean online record.
+            </li>
+            <li>
+                <strong>Make Informed Decisions:</strong> Ensure you’re investing in or working with a reliable domain.
+            </li>
+        </ul>
+
+        <blockquote style="font-style: italic; margin-left: 20px; color: #333; margin-bottom: 40px;">
+            "In the competitive world of SEO, every detail matters. Knowing the age of a domain can give you the edge
+            needed to succeed."
+        </blockquote>
+    </div>
+
+
+
+    <!-- Loader -->
+    <div id="loader" style="display: none;">
+        <div id="progress-bar-container">
+            <div id="progress-bar" style="width: 0%;"></div>
+        </div>
+        <p id="loading-text">Loading...</p>
+    </div>
+
+    <footer class="footer">
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="Contact.html">Contact Us</a>
+        </div>
+        <div>
+            <span class="Sandeep1">Made By Sandeep</span>
+            <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-512.png" alt="Heart"
+                class="heart">
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Hamburger Menu Toggle Function
+        function toggleHamburgerMenu() {
+            const menu = document.getElementById("nav-links"); // Navigation links container
+            const hamburger = document.getElementById("hamburger"); // Hamburger button
+
+            // Toggle the menu visibility
+            menu.classList.toggle("active");  // Adds or removes the 'active' class to show/hide the menu
+
+            // Change the hamburger icon (optional)
+            if (menu.classList.contains("active")) {
+                hamburger.innerHTML = "<i class='fas fa-times'></i>"; // Change to 'X' when menu is open
+            } else {
+                hamburger.innerHTML = "<i class='fas fa-bars'></i>"; // Change back to hamburger icon (☰) when menu is closed
+            }
+        }
+
+        // Add event listener to the hamburger menu
+        document.getElementById("hamburger").addEventListener("click", toggleHamburgerMenu);
+    </script>
+</body>
+
+</html>
